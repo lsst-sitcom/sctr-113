@@ -1,38 +1,93 @@
-\documentclass[DM,lsstdraft,toc]{lsstdoc}
+% generated from JIRA project LVV
+% using template at /opt/hostedtoolcache/Python/3.11.11/x64/lib/python3.11/site-packages/docsteady/templates/tpnoresult.latex.jinja2.
+% using docsteady version 3.0.2
+% Please do not edit -- update information in Jira instead
+\documentclass[PSE,lsstdraft,STR,toc]{lsstdoc}
 \usepackage{geometry}
 \usepackage{longtable,booktabs}
 \usepackage{enumitem}
 \usepackage{arydshln}
+\usepackage{attachfile}
+\usepackage{array}
+\usepackage{dashrule}
 
-\input{meta.tex}
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}p{#1}}
 
+\input meta.tex
+
+\newcommand{\attachmentsUrl}{https://github.com/\gitorg/\lsstDocType-\lsstDocNum/blob/\gitref/attachments}
 \providecommand{\tightlist}{
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
+\setcounter{tocdepth}{4}
+
 \begin{document}
 
-\def\milestoneName{System-level Science Verification: Delivered Image Quality and PSF Modeling}
-\def\milestoneId{LVV-P132}
-\def\product{Data Management}
+\def\milestoneName{Delivered Image Quality and PSF Modeling}
+\def\milestoneId{System-level Science Verification Acceptance Test Campaign}
+\def\product{Science Verification}
 
 \setDocCompact{true}
 
-\title{LVV-P132 System-level Science Verification: Delivered Image Quality and PSF Modeling Test Plan }
+\title{System-level Science Verification Acceptance Test Campaign: Delivered
+Image Quality and PSF Modeling Test Plan }
 \setDocRef{\lsstDocType-\lsstDocNum}
-\date{\vcsDate}
-\author{Josh Meyers}
+\date{ 2025-01-31 }
+\author{ Josh Meyers }
 
 \input{history_and_info.tex}
 
+
 \setDocAbstract{
-This is a stub test report created from a template.
-The content is being prepared.
+This is the test plan for
+\textbf{ Delivered Image Quality and PSF Modeling} (System-level Science Verification Acceptance Test Campaign),
+an LSST milestone pertaining to the Project System Engineering and Commissioning.\\
+This document is based on content automatically extracted from the Jira test database on \docDate.
+The most recent change to the document repository was on \vcsDate.
 }
+
 
 \maketitle
 
 \section{Introduction}
-Use the GitHub Actions workflow ``docgen from Jira'' to generate this document's content from Jira.
+\label{sect:intro}
+
+
+\subsection{Objectives}
+\label{sect:objectives}
+
+ This acceptance test campaign will verify system-level science
+performance metrics in the OSS and LSR associated with delivered image
+quality and PSF modeling.
+
+
+
+\subsection{System Overview}
+\label{sect:systemoverview}
+
+ None
+
+
+\subsection{Document Overview}
+\label{sect:docoverview}
+
+This document was generated from Jira, obtaining the relevant information from the
+\href{https://rubinobs.atlassian.net/projects/LVV?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page\#!/v2/testPlan/LVV-P132}{LVV-P132}
+~Jira Test Plan and related Test Cycles (
+\href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCycle/LVV-R298}{LVV-R298}
+).
+
+Section \ref{sect:intro} provides an overview of the test campaign, the system under test (\product{}),
+the applicable documentation, and explains how this document is organized.
+Section \ref{sect:testplan} provides additional information about the test plan, like for example the configuration
+used for this test or related documentation.
+Section \ref{sect:personnel} describes the necessary roles and lists the individuals assigned to them.
+
+Section \ref{sect:overview} provides a summary of the test results, including an overview in Table \ref{table:summary},
+an overall assessment statement and suggestions for possible improvements.
+Section \ref{sect:detailedtestresults} provides detailed results for each step in each test case.
+
+The current status of test plan \href{https://rubinobs.atlassian.net/projects/LVV?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page\#!/v2/testPlan/LVV-P132}{LVV-P132} in Jira is \textbf{ Draft }.
 
 \subsection{References}
 \label{sect:references}
@@ -40,5 +95,467 @@ Use the GitHub Actions workflow ``docgen from Jira'' to generate this document's
 \bibliography{lsst,refs,books,refs_ads,local}
 
 
-\input{appendix}
+\newpage
+\section{Test Plan Details}
+\label{sect:testplan}
+
+
+\subsection{Data Collection}
+
+  Observing is not required for this test campaign.
+
+\subsection{Verification Environment}
+\label{sect:hwconf}
+  None
+
+  \subsection{Entry Criteria}
+  None
+
+  \subsection{Exit Criteria}
+  None
+
+
+\subsection{Related Documentation}
+
+Docushare collection where additional relevant documentation can be found:
+
+\begin{itemize}
+\item None
+\end{itemize}
+
+
+
+\subsection{PMCS Activity}
+
+Primavera milestones related to the test campaign:
+None
+
+
+\newpage
+\section{Personnel}
+\label{sect:personnel}
+
+The personnel involved in the test campaign is shown in the following table.
+
+{\small
+\begin{longtable}{p{3cm}p{3cm}p{3cm}p{6cm}}
+\hline
+\multicolumn{2}{r}{T. Plan \href{https://rubinobs.atlassian.net/projects/LVV?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page\#!/v2/testPlan/LVV-P132}{LVV-P132} owner:} &
+\multicolumn{2}{l}{\textbf{ Josh Meyers } }\\\hline
+\multicolumn{2}{r}{T. Cycle \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCycle/LVV-R298}{LVV-R298} owner:} &
+\multicolumn{2}{l}{\textbf{
+Josh Meyers }
+} \\\hline
+\textbf{Test Cases} & \textbf{Assigned to} & \textbf{Executed by} & \textbf{Additional Test Personnel} \\ \hline
+\href{https://rubinobs.atlassian.net/projects/LVV?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page\#!/v2/testCase/LVV-E3890}{LVV-E3890}
+& {\small Josh Meyers } & {\small Undefined } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://rubinobs.atlassian.net/projects/LVV?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page\#!/v2/testCase/LVV-E3891}{LVV-E3891}
+& {\small Josh Meyers } & {\small Undefined } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://rubinobs.atlassian.net/projects/LVV?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page\#!/v2/testCase/LVV-E3892}{LVV-E3892}
+& {\small Josh Meyers } & {\small Undefined } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://rubinobs.atlassian.net/projects/LVV?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page\#!/v2/testCase/LVV-E3893}{LVV-E3893}
+& {\small Josh Meyers } & {\small Undefined } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://rubinobs.atlassian.net/projects/LVV?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page\#!/v2/testCase/LVV-E3894}{LVV-E3894}
+& {\small Josh Meyers } & {\small Undefined } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://rubinobs.atlassian.net/projects/LVV?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page\#!/v2/testCase/LVV-E3902}{LVV-E3902}
+& {\small Josh Meyers } & {\small Undefined } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://rubinobs.atlassian.net/projects/LVV?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page\#!/v2/testCase/LVV-E3903}{LVV-E3903}
+& {\small Josh Meyers } & {\small Undefined } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://rubinobs.atlassian.net/projects/LVV?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page\#!/v2/testCase/LVV-E3904}{LVV-E3904}
+& {\small Josh Meyers } & {\small Undefined } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://rubinobs.atlassian.net/projects/LVV?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page\#!/v2/testCase/LVV-E3905}{LVV-E3905}
+& {\small Josh Meyers } & {\small Undefined } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://rubinobs.atlassian.net/projects/LVV?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page\#!/v2/testCase/LVV-E3922}{LVV-E3922}
+& {\small Kevin Siruno } & {\small Undefined } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://rubinobs.atlassian.net/projects/LVV?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page\#!/v2/testCase/LVV-E3923}{LVV-E3923}
+& {\small Josh Meyers } & {\small Undefined } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\href{https://rubinobs.atlassian.net/projects/LVV?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page\#!/v2/testCase/LVV-E3924}{LVV-E3924}
+& {\small Josh Meyers } & {\small Undefined } &
+\begin{minipage}[]{6cm}
+\smallskip
+{\small  }
+\medskip
+\end{minipage}
+\\ \hline
+\end{longtable}
+}
+
+\newpage
+
+\section{Test Campaign Overview}
+\label{sect:overview}
+
+\subsection{Summary}
+\label{sect:summarytable}
+
+{\small
+\begin{longtable}{p{2cm}cp{2.3cm}p{8.6cm}p{2.3cm}}
+\toprule
+\multicolumn{2}{r}{ T. Plan \href{https://rubinobs.atlassian.net/projects/LVV?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page\#!/v2/testPlan/LVV-P132}{LVV-P132}:} &
+\multicolumn{2}{p{10.9cm}}{\textbf{ System-level Science Verification Acceptance Test Campaign: Delivered
+Image Quality and PSF Modeling }} & Draft \\\hline
+\multicolumn{2}{r}{ T. Cycle \href{https://jira.lsstcorp.org/secure/Tests.jspa\#/testCycle/LVV-R298}{LVV-R298}:} &
+\multicolumn{2}{p{10.9cm}}{\textbf{ System-level Science Verification Acceptance Test Campaign: Delivered
+Image Quality and PSF Modeling (ComCam) }} & Not Executed \\\hline
+\textbf{Test Cases} &  \textbf{Ver.}  \\\toprule
+\href{https://rubinobs.atlassian.net/projects/LVV?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page\#!/v2/testCase/LVV-E3890}{LVV-E3890}
+&  1.0(d)
+\\
+\href{https://rubinobs.atlassian.net/projects/LVV?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page\#!/v2/testCase/LVV-E3891}{LVV-E3891}
+&  1.0(d)
+\\
+\href{https://rubinobs.atlassian.net/projects/LVV?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page\#!/v2/testCase/LVV-E3892}{LVV-E3892}
+&  1.0(d)
+\\
+\href{https://rubinobs.atlassian.net/projects/LVV?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page\#!/v2/testCase/LVV-E3893}{LVV-E3893}
+&  1.0(d)
+\\
+\href{https://rubinobs.atlassian.net/projects/LVV?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page\#!/v2/testCase/LVV-E3894}{LVV-E3894}
+&  1.0(d)
+\\
+\href{https://rubinobs.atlassian.net/projects/LVV?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page\#!/v2/testCase/LVV-E3902}{LVV-E3902}
+&  1.0(d)
+\\
+\href{https://rubinobs.atlassian.net/projects/LVV?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page\#!/v2/testCase/LVV-E3903}{LVV-E3903}
+&  1.0(d)
+\\
+\href{https://rubinobs.atlassian.net/projects/LVV?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page\#!/v2/testCase/LVV-E3904}{LVV-E3904}
+&  1.0(d)
+\\
+\href{https://rubinobs.atlassian.net/projects/LVV?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page\#!/v2/testCase/LVV-E3905}{LVV-E3905}
+&  1.0(d)
+\\
+\href{https://rubinobs.atlassian.net/projects/LVV?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page\#!/v2/testCase/LVV-E3922}{LVV-E3922}
+&  1.0(d)
+\\
+\href{https://rubinobs.atlassian.net/projects/LVV?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page\#!/v2/testCase/LVV-E3923}{LVV-E3923}
+&  1.0(d)
+\\
+\href{https://rubinobs.atlassian.net/projects/LVV?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page\#!/v2/testCase/LVV-E3924}{LVV-E3924}
+&  1.0(d)
+\\
+\\\hline
+\caption{Test Campaign Summary}
+\label{table:summary}
+\end{longtable}
+}
+
+\subsection{Overall Assessment}
+\label{sect:overallassessment}
+
+None
+
+\subsection{Recommended Improvements}
+\label{sect:recommendations}
+
+\newpage
+\section{Detailed Tests}
+\label{sect:detailedtests}
+
+\subsection{Test Cycle LVV-R298 }
+
+Open test cycle {\it \href{https://rubinobs.atlassian.net/projects/LVV?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page\#!/testPlayer/LVV-R298}{System-level Science Verification Acceptance Test Campaign: Delivered
+Image Quality and PSF Modeling (ComCam)}} in Jira.
+
+Test Cycle name: System-level Science Verification Acceptance Test Campaign: Delivered
+Image Quality and PSF Modeling (ComCam)\\
+Status: Not Executed
+
+Test campaign supporting "System-level Science Verification Acceptance
+Test Campaign: Delivered Image Quality and PSF Modeling" using ComCam.
+
+\subsubsection{Software Version/Baseline}
+Not provided.
+
+\subsubsection{Configuration}
+Not provided.
+
+\subsubsection{Test Cases in LVV-R298 Test Cycle}
+
+\paragraph{ LVV-E3890 - Median image quality at 0.44 arcsecond seeing }\mbox{}\\
+
+Version \textbf{1.0(d)}.
+Open  \href{https://rubinobs.atlassian.net/projects/LVV?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page\#!/v2/testCase/LVV-E3890}{\textit{ LVV-E3890 } }
+test case in Jira.
+
+None
+
+\textbf{ Preconditions}:\\
+None
+
+Final comment:\\None
+
+
+Detailed steps :
+
+\paragraph{ LVV-E3891 - Median image quality at 0.6 arcsecond seeing }\mbox{}\\
+
+Version \textbf{1.0(d)}.
+Open  \href{https://rubinobs.atlassian.net/projects/LVV?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page\#!/v2/testCase/LVV-E3891}{\textit{ LVV-E3891 } }
+test case in Jira.
+
+None
+
+\textbf{ Preconditions}:\\
+None
+
+Final comment:\\None
+
+
+Detailed steps :
+
+\paragraph{ LVV-E3892 - Median image quality at 0.8 arcsecond seeing }\mbox{}\\
+
+Version \textbf{1.0(d)}.
+Open  \href{https://rubinobs.atlassian.net/projects/LVV?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page\#!/v2/testCase/LVV-E3892}{\textit{ LVV-E3892 } }
+test case in Jira.
+
+None
+
+\textbf{ Preconditions}:\\
+None
+
+Final comment:\\None
+
+
+Detailed steps :
+
+\paragraph{ LVV-E3893 - Variation of image quality across FOV }\mbox{}\\
+
+Version \textbf{1.0(d)}.
+Open  \href{https://rubinobs.atlassian.net/projects/LVV?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page\#!/v2/testCase/LVV-E3893}{\textit{ LVV-E3893 } }
+test case in Jira.
+
+Measure the image quality (excluding the atmosphere) across the the FOV
+for a range of image qualities that must extend from \textasciitilde0.44
+arcsec FWHM to \textasciitilde0.80 arcsec FWHM
+
+\textbf{ Preconditions}:\\
+None
+
+Final comment:\\None
+
+
+Detailed steps :
+
+\paragraph{ LVV-E3894 - Verify Ellipticity Residuals w/ On-Sky Data for Single Exposures }\mbox{}\\
+
+Version \textbf{1.0(d)}.
+Open  \href{https://rubinobs.atlassian.net/projects/LVV?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page\#!/v2/testCase/LVV-E3894}{\textit{ LVV-E3894 } }
+test case in Jira.
+
+None
+
+\textbf{ Preconditions}:\\
+None
+
+Final comment:\\None
+
+
+Detailed steps :
+
+\paragraph{ LVV-E3902 - Image quality - degradation from zenith }\mbox{}\\
+
+Version \textbf{1.0(d)}.
+Open  \href{https://rubinobs.atlassian.net/projects/LVV?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page\#!/v2/testCase/LVV-E3902}{\textit{ LVV-E3902 } }
+test case in Jira.
+
+None
+
+\textbf{ Preconditions}:\\
+None
+
+Final comment:\\None
+
+
+Detailed steps :
+
+\paragraph{ LVV-E3903 - Image quality at zenith }\mbox{}\\
+
+Version \textbf{1.0(d)}.
+Open  \href{https://rubinobs.atlassian.net/projects/LVV?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page\#!/v2/testCase/LVV-E3903}{\textit{ LVV-E3903 } }
+test case in Jira.
+
+None
+
+\textbf{ Preconditions}:\\
+None
+
+Final comment:\\None
+
+
+Detailed steps :
+
+\paragraph{ LVV-E3904 - Off Zenith Image Quality Degradation }\mbox{}\\
+
+Version \textbf{1.0(d)}.
+Open  \href{https://rubinobs.atlassian.net/projects/LVV?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page\#!/v2/testCase/LVV-E3904}{\textit{ LVV-E3904 } }
+test case in Jira.
+
+None
+
+\textbf{ Preconditions}:\\
+None
+
+Final comment:\\None
+
+
+Detailed steps :
+
+\paragraph{ LVV-E3905 - PSF ellipticity }\mbox{}\\
+
+Version \textbf{1.0(d)}.
+Open  \href{https://rubinobs.atlassian.net/projects/LVV?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page\#!/v2/testCase/LVV-E3905}{\textit{ LVV-E3905 } }
+test case in Jira.
+
+None
+
+\textbf{ Preconditions}:\\
+None
+
+Final comment:\\None
+
+
+Detailed steps :
+
+\paragraph{ LVV-E3922 - Single Image Performance }\mbox{}\\
+
+Version \textbf{1.0(d)}.
+Open  \href{https://rubinobs.atlassian.net/projects/LVV?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page\#!/v2/testCase/LVV-E3922}{\textit{ LVV-E3922 } }
+test case in Jira.
+
+Verify the{~requirenments for a~}single standard visit{~}
+
+\textbf{ Preconditions}:\\
+None
+
+Final comment:\\None
+
+
+Detailed steps :
+
+\paragraph{ LVV-E3923 - Data Processing Campaign: Full-survey Key Performance Metrics }\mbox{}\\
+
+Version \textbf{1.0(d)}.
+Open  \href{https://rubinobs.atlassian.net/projects/LVV?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page\#!/v2/testCase/LVV-E3923}{\textit{ LVV-E3923 } }
+test case in Jira.
+
+None
+
+\textbf{ Preconditions}:\\
+None
+
+Final comment:\\None
+
+
+Detailed steps :
+
+\paragraph{ LVV-E3924 - On-sky Observations: Full-survey Key Performance Metrics }\mbox{}\\
+
+Version \textbf{1.0(d)}.
+Open  \href{https://rubinobs.atlassian.net/projects/LVV?selectedItem=com.atlassian.plugins.atlassian-connect-plugin:com.kanoah.test-manager__main-project-page\#!/v2/testCase/LVV-E3924}{\textit{ LVV-E3924 } }
+test case in Jira.
+
+Repeated observations of a smaller number of fields reaching cumulative
+exposures equivalent to the 10-year stack in the wide-fast-deep survey,
+specifically, 200 visits in both the r and i band.\\
+These observations are designed to
+
+\begin{itemize}
+\tightlist
+\item
+  measure residual PSF ellipticities
+\item
+  test transient, variable, and moving object detection over a range of
+  timescales\\
+  \strut \\
+\end{itemize}
+
+Three fields should be chosen along the ecliptic that together span a
+range of source densities.\\
+Each field should be observed in multiple epochs distributed over at
+least 3 consecutive nights and cover a range of air masses.\\
+Dithered pointings will be used to approximate the coverage pattern
+expected in the wide-fast-deep survey.\\
+\strut \\
+Estimated observing time = 34 seconds * 200 visits * 2 filters * 3
+(dither pattern) * 3 fields = \textasciitilde36hrs.
+
+\textbf{ Preconditions}:\\
+None
+
+Final comment:\\None
+
+
+Detailed steps :
+
+
+
+\input{appendix.tex}
 \end{document}
